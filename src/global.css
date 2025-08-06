@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Fonte padrão para o body */
+body {
+  font: var(--font-body-regular);
+}
+
+@theme {
+  --color-*: initial;
+  --font-family-*: initial;
+
+  /* Cores básicas */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Cores do projeto */
+  --color-blue-yonder: #2e96f5;
+  --color-neon-blue: #0960e1;
+  --color-electric-blue: #0042a6;
+  --color-deep-blue: #07173f;
+  --color-rocket-red: #e43700;
+  --color-martian-red: #8e1100;
+  --color-neon-yellow: #eafe07;
+  --gradient-blue: linear-gradient(
+    135deg,
+    rgba(0, 66, 166, 1) 0%,
+    rgba(7, 23, 63, 1) 100%
+  );
+
+  /* Combinações de fonte + peso pré-definidas */
+  --font-heading: "Overpass", sans-serif;
+  --font-body: "Fira Sans", sans-serif;
+}
