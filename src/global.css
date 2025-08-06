@@ -5,6 +5,15 @@ body {
   font: var(--font-body-regular);
 }
 
+/* Classes personalizadas para gradientes */
+.bg-gradient-space {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 66, 166, 1) 0%,
+    rgba(7, 23, 63, 1) 100%
+  );
+}
+
 @theme {
   --color-*: initial;
   --font-family-*: initial;
@@ -21,7 +30,7 @@ body {
   --color-rocket-red: #e43700;
   --color-martian-red: #8e1100;
   --color-neon-yellow: #eafe07;
-  --gradient-blue: linear-gradient(
+  --color-gradient-blue: linear-gradient(
     135deg,
     rgba(0, 66, 166, 1) 0%,
     rgba(7, 23, 63, 1) 100%
