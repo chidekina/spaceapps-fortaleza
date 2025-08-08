@@ -58,14 +58,6 @@ tmp/
 ehthumbs.db
 Thumbs.db
 
-# Arquivos grandes - não versionar
-public/Banner.mp4
-*.mp4
-*.mov
-*.avi
-*.mkv
-*.webm
-
 # Arquivos de design
 *.psd
 *.ai
