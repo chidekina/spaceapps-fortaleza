@@ -7,7 +7,7 @@ const Header = () => {
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex-shrink-0 flex items-center">
-                        <img src="./logo/4.png" alt="Logo Space Apps Fortaleza" className="h-40 w-auto mr-3" />
+                        <img src="./logo/4.png" alt="Logo Space Apps Fortaleza" className="h-15 w-auto mr-3" />
                     </div>
                     <NavBar />
                     <div className="md:hidden">
