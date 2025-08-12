@@ -3,6 +3,11 @@ import Banner from "../../components/Banner";
 import BannerImage from "../../components/BannerImage";
 import BannerText from "../../components/BannerText";
 import Button from "../../components/Button";
+import CircleBg from "../../components/CircleBg";
+import GalaxyBg from "../../components/GalaxyBg";
+import HeadText from "../../components/HeadText";
+import Statics from "../../components/Statics";
+import staticsList from "../../db/statics.json";
 
 const Home = () => {
     return (
@@ -33,6 +38,13 @@ const Home = () => {
                 />
                 <ArrowDown />
             </Banner>
+            <GalaxyBg>
+                <CircleBg>
+
+                <HeadText text="DISCOVERY IN NUMBERS"/>
+                <Statics list={staticsList} />
+                </CircleBg>
+            </GalaxyBg>
         </>
     );
 }
