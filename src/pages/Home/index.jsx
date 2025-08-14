@@ -10,7 +10,7 @@ import SpaceAppsStats from "../../components/SpaceAppsStats";
 import SlideUpOnScroll from "../../effects/SlideUpOnScroll";
 import staticsList from "../../db/statics.json";
 import PromoBanner from "../../components/PromoBanner";
-import Banner from "../../components/Banner";
+import Banner from "../../components/Banner/index.jsx";
 
 const Home = () => {
     return (
