@@ -5,7 +5,7 @@ const CircleBg = ({
     className = ""
 }) => {
     const circles = Array.from({ length: circleCount }, (_, i) => {
-        const size = 850 + (i * 200); 
+        const size = 850 + (i * 200);
         return {
             id: i,
             size: size,
@@ -21,7 +21,7 @@ const CircleBg = ({
     });
 
     return (
-        <div className={`relative${className} mb-150`}>
+        <div className={`relative ${className} mb-32`}>
             {circles.map(circle => (
                 <div
                     key={circle.id}
