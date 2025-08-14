@@ -1,5 +1,5 @@
 import ArrowDown from "../../components/ArrowDown";
-import Banner from "../../components/Banner";
+import Banner from "../../components/Banner/index.jsx";
 import BannerImage from "../../components/BannerImage";
 import BannerText from "../../components/BannerText";
 import Button from "../../components/Button";
