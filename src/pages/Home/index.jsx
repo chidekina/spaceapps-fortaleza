@@ -7,7 +7,10 @@ import CircleBg from "../../components/CircleBg";
 import GalaxyBg from "../../components/GalaxyBg";
 import HeadText from "../../components/HeadText";
 import Statics from "../../components/Statics";
+import SpaceAppsStats from "../../components/SpaceAppsStats";
+import SlideUpOnScroll from "../../effects/SlideUpOnScroll";
 import staticsList from "../../db/statics.json";
+import PromoBanner from "../../components/PromoBanner";
 
 const Home = () => {
     return (
@@ -26,24 +29,27 @@ const Home = () => {
                     fontWeight="font-black"
                     textColor="text-neon-yellow"
                 />
-                <BannerText 
+                <BannerText
                     text="DE OUTUBRO DE 2025"
                     fontSize="text-2xl"
                     fontWeight="font-bold"
                     margin="mb-8"
                 />
-                <Button 
-                text="Inscreva-se"
-                link="https://www.sympla.com.br/preview/d05c9b4ea5d496d2fe49626a0c93c3be"
+                <Button
+                    text="Inscreva-se"
+                    link="https://www.sympla.com.br/preview/d05c9b4ea5d496d2fe49626a0c93c3be"
                 />
                 <ArrowDown />
             </Banner>
+            <PromoBanner />
             <GalaxyBg>
-                <CircleBg>
-
-                <HeadText text="DISCOVERY IN NUMBERS"/>
-                <Statics list={staticsList} />
-                </CircleBg>
+                <SlideUpOnScroll delay={0.2} duration={0.8} distance={80}>
+                    <CircleBg>
+                        <HeadText text="SPACE APPS EM NÚMEROS" />
+                        <Statics list={staticsList} />
+                    </CircleBg>
+                </SlideUpOnScroll>
+            <SpaceAppsStats />
             </GalaxyBg>
         </>
     );

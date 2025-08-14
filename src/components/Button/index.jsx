@@ -2,22 +2,20 @@ const Button = ({
     link,
     text,
     width = "w-40",
-    height = "h-12",
+    height = "h-13",
     backgroundColor = "bg-neon-blue",
     textColor = "text-white",
     fontSize = "text-xl"
 }) => {
     return (
-        <a 
-        target="_blank"
-        href={link}
-        rel="noopener noreferrer"
+        <a
+            target="_blank"
+            href={link}
+            rel="noopener noreferrer"
         >
             <button
-             className={`cursor-pointer font-semibold rounded-3xl ${width} ${height} ${backgroundColor} ${textColor}`} >
-                <span className={`${fontSize}`}>
-                    {text}
-                </span>
+                className={`flex cursor-pointer font-semibold rounded-3xl items-center justify-center ${width} ${height} ${backgroundColor} ${textColor} ${fontSize}`} >
+                {text}
             </button>
         </a>
     );
