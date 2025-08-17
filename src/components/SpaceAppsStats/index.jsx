@@ -1,5 +1,6 @@
 import sunGif from '../../assets/sun.gif';
 import staticDataList from "../../db/staticDataJson.json";
+import SlideUpOnScroll from '../../effects/SlideUpOnScroll';
 import Overlay from '../Overlay';
 
 const SpaceAppsStats = () => {
@@ -57,59 +58,61 @@ const SpaceAppsStats = () => {
                         }}
                     />
                 </div>
+                <SlideUpOnScroll>
 
-                {/* Layout para Desktop (lg+) - Grid Layout */}
-                <div className="hidden lg:flex lg:flex-col lg:items-center lg:mt-8 lg:mb-20 lg:space-y-12">
-                    {/* Grid principal com 4 colunas para desktop */}
-                    <div className="grid grid-cols-4 gap-6 place-items-center w-full max-w-6xl">
-                        {staticDataList.map(item => {
-                            // Pular Universal Event Registration aqui, será renderizado separadamente
-                            if (item.data === "Universal Event<br />Registration") {
-                                return null;
-                            }
+                    {/* Layout para Desktop (lg+) - Grid Layout */}
+                    <div className="hidden lg:flex lg:flex-col lg:items-center lg:mt-8 lg:mb-20 lg:space-y-12">
+                        {/* Grid principal com 4 colunas para desktop */}
+                        <div className="grid grid-cols-4 gap-6 place-items-center w-full max-w-6xl">
+                            {staticDataList.map(item => {
+                                // Pular Universal Event Registration aqui, será renderizado separadamente
+                                if (item.data === "Universal Event<br />Registration") {
+                                    return null;
+                                }
 
-                            // Todos os elementos com o mesmo tamanho
-                            return (
+                                // Todos os elementos com o mesmo tamanho
+                                return (
+                                    <div key={item.id} className="flex justify-center">
+                                        <div className="flex flex-col gap-2 justify-center items-center
+                                             backdrop-blur-[2px] border border-yellow-400 rounded-full p-4 w-[180px] h-[120px]">
+                                            <div className='flex items-center gap-2'>
+                                                <img
+                                                    className='w-7'
+                                                    src={`/icons/${item.source}`}
+                                                />
+                                                <div className="text-xl font-bold text-neon-yellow">
+                                                    {item.staticValue}
+                                                </div>
+                                            </div>
+                                            <div className="text-xs text-center leading-tight" dangerouslySetInnerHTML={{ __html: item.data }}></div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+
+                        {/* Universal Event Registration centralizado */}
+                        <div className="flex justify-center">
+                            {staticDataList.filter(item => item.data === "Universal Event<br />Registration").map(item => (
                                 <div key={item.id} className="flex justify-center">
                                     <div className="flex flex-col gap-2 justify-center items-center
-                                             backdrop-blur-[2px] border border-yellow-400 rounded-full p-4 w-[180px] h-[120px]">
+                                         backdrop-blur-[2px] border border-yellow-400 rounded-full p-4 w-[180px] h-[120px]">
                                         <div className='flex items-center gap-2'>
                                             <img
                                                 className='w-7'
                                                 src={`/icons/${item.source}`}
                                             />
                                             <div className="text-xl font-bold text-neon-yellow">
-                                                {item.staticValue}
+                                                {item.data === "Space Agency<br />Partners" ? item.staticValue : `${item.staticValue}+`}
                                             </div>
                                         </div>
                                         <div className="text-xs text-center leading-tight" dangerouslySetInnerHTML={{ __html: item.data }}></div>
                                     </div>
                                 </div>
-                            );
-                        })}
+                            ))}
+                        </div>
                     </div>
-
-                    {/* Universal Event Registration centralizado */}
-                    <div className="flex justify-center">
-                        {staticDataList.filter(item => item.data === "Universal Event<br />Registration").map(item => (
-                            <div key={item.id} className="flex justify-center">
-                                <div className="flex flex-col gap-2 justify-center items-center
-                                         backdrop-blur-[2px] border border-yellow-400 rounded-full p-4 w-[180px] h-[120px]">
-                                    <div className='flex items-center gap-2'>
-                                        <img
-                                            className='w-7'
-                                            src={`/icons/${item.source}`}
-                                        />
-                                        <div className="text-xl font-bold text-neon-yellow">
-                                            {item.data === "Space Agency<br />Partners" ? item.staticValue : `${item.staticValue}+`}
-                                        </div>
-                                    </div>
-                                    <div className="text-xs text-center leading-tight" dangerouslySetInnerHTML={{ __html: item.data }}></div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                </SlideUpOnScroll>
 
                 {/* Layout para Mobile/Tablet (até lg) - Tamanhos uniformes */}
                 <div className="lg:hidden flex flex-col items-center mt-8 mb-20 space-y-8">
