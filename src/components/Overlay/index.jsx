@@ -1,4 +1,4 @@
-const Overlay = ({ opacity = 50 }) => {
+const Overlay = ({ opacity = 65 }) => {
     return (
         <div
             className="absolute inset-0 bg-black z-0"

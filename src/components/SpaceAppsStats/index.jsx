@@ -1,23 +1,50 @@
 import sunGif from '../../assets/sun.gif';
-import StaticData from '../StaticData';
 import staticDataList from "../../db/staticDataJson.json";
+import Overlay from '../Overlay';
 
 const SpaceAppsStats = () => {
 
     return (
         <section className="relative w-full min-h-screen py-10 sm:py-20 bg-cover bg-center bg-fixed overflow-hidden flex items-center justify-center mt-20 sm:mt-32 lg:mt-40"
             style={{
-                backgroundImage: 'url(/galaxy.jpg)',
+                backgroundImage: 'url(/galaxy-2.jpg)',
                 backgroundAttachment: 'fixed',
                 minHeight: '100vh'
             }}
         >
+            <Overlay />
             <div className="absolute inset-0 bg-opacity-40 z-10" />
 
             <div className="relative z-20 w-full h-full max-w-7xl mx-auto px-4 sm:px-8" style={{ minHeight: '100vh' }}>
 
-                {/* Sol centralizado no topo para mobile, absoluto para desktop */}
-                <div className="lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-30 flex justify-center lg:block pt-8 pb-12 lg:pt-0 lg:pb-0">
+                {/* TOP 5 COUNTRIES em destaque no topo - Mobile/Tablet/Desktop */}
+                <div className="flex justify-center pt-8 pb-8">
+                    <div className="flex flex-col gap-3 justify-center items-center
+                             backdrop-blur-[2px] border-2 border-yellow-400 rounded-lg p-5 sm:p-6 min-w-[260px] sm:min-w-[350px] lg:min-w-[400px] shadow-2xl"
+                        style={{
+                            background: 'rgba(0, 0, 0, 0.4)',
+                            boxShadow: '0 0 30px rgba(255, 255, 0, 0.3)'
+                        }}>
+                        <div className='flex items-center gap-3'>
+                            <img
+                                className='w-8 sm:w-10'
+                                src='/icons/globe.svg'
+                            />
+                            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-neon-yellow">
+                                TOP 5 COUNTRIES
+                            </div>
+                        </div>
+                        <div className="text-base sm:text-lg text-center text-white font-semibold">
+                            India | Egypt | Pakistan | <span className='font-bold text-neon-yellow'>Brazil</span> | Turkey
+                        </div>
+                        <div className="text-xs sm:text-sm text-yellow-300 text-center font-medium">
+                            By Number of Registrants
+                        </div>
+                    </div>
+                </div>
+
+                {/* Sol centralizado */}
+                <div className="flex justify-center pt-8 pb-12 lg:pt-8 lg:pb-16 z-30">
                     <img
                         src={sunGif}
                         alt="Sun"
@@ -31,102 +58,103 @@ const SpaceAppsStats = () => {
                     />
                 </div>
 
-                {/* Layout para Desktop (lg+) - Posicionamento absoluto */}
-                <div className="hidden lg:block">
-                    {staticDataList.map(item => (
-                        <StaticData
-                            key={item.id}
-                            yDirection={item.yDirection}
-                            yValue={item.yValue}
-                            xDirection={item.xDirection}
-                            xValue={item.xValue}
-                            source={item.source}
-                            staticValue={item.staticValue}
-                            data={item.data}
-                            className={item.className}
-                        />
-                    ))}
-                </div>
-
-                {/* Layout para Mobile/Tablet (até lg) - Flex Column com Sol no topo */}
-                <div className="lg:hidden flex flex-col items-center mt-8 mb-20 space-y-12">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 place-items-center w-full">
+                {/* Layout para Desktop (lg+) - Grid Layout */}
+                <div className="hidden lg:flex lg:flex-col lg:items-center lg:mt-8 lg:mb-20 lg:space-y-12">
+                    {/* Grid principal com 4 colunas para desktop */}
+                    <div className="grid grid-cols-4 gap-6 place-items-center w-full max-w-6xl">
                         {staticDataList.map(item => {
-                            // Universal Event Registration ocupa 2 colunas
+                            // Pular Universal Event Registration aqui, será renderizado separadamente
                             if (item.data === "Universal Event<br />Registration") {
-                                return (
-                                    <div key={item.id} className="col-span-2 sm:col-span-2 flex justify-center">
-                                        <div className="flex flex-col gap-2 justify-center items-center
-                                                 backdrop-blur-[2px] border border-yellow-400 rounded-lg p-3 w-full max-w-[280px] sm:max-w-[320px]">
-                                            <div className='flex items-center gap-2'>
-                                                <img
-                                                    className='w-6 sm:w-7'
-                                                    src={`/icons/${item.source}`}
-                                                />
-                                                <div className="text-sm sm:text-base font-bold text-neon-yellow">
-                                                    {item.staticValue}
-                                                </div>
-                                            </div>
-                                            <div className="text-xs sm:text-sm text-center" dangerouslySetInnerHTML={{ __html: item.data }}></div>
-                                        </div>
-                                    </div>
-                                );
+                                return null;
                             }
 
-                            // Outros elementos ocupam 1 coluna
+                            // Todos os elementos com o mesmo tamanho
                             return (
                                 <div key={item.id} className="flex justify-center">
-                                    <div className="flex flex-col gap-1 sm:gap-2 justify-center items-center
-                                             backdrop-blur-[2px] border border-yellow-400 rounded-full p-2 sm:p-3 min-w-[120px] sm:min-w-[140px]">
-                                        <div className='flex items-center gap-1 sm:gap-2'>
+                                    <div className="flex flex-col gap-2 justify-center items-center
+                                             backdrop-blur-[2px] border border-yellow-400 rounded-full p-4 w-[180px] h-[120px]">
+                                        <div className='flex items-center gap-2'>
                                             <img
-                                                className='w-5 sm:w-6'
+                                                className='w-7'
                                                 src={`/icons/${item.source}`}
                                             />
-                                            <div className="text-sm sm:text-lg font-bold text-neon-yellow">
+                                            <div className="text-xl font-bold text-neon-yellow">
                                                 {item.staticValue}
                                             </div>
                                         </div>
-                                        <div className="text-xs text-center" dangerouslySetInnerHTML={{ __html: item.data }}></div>
+                                        <div className="text-xs text-center leading-tight" dangerouslySetInnerHTML={{ __html: item.data }}></div>
                                     </div>
                                 </div>
                             );
-                        })}                        {/* TOP 5 COUNTRIES para mobile - ocupando espaço de 2 colunas */}
-                        <div className="col-span-2 sm:col-span-2 flex justify-center mt-4">
-                            <div className="flex flex-col gap-2 justify-center items-center
-                                     backdrop-blur-[2px] border border-yellow-400 rounded-lg p-3 w-full max-w-[280px] sm:max-w-[320px]">
-                                <div className='flex items-center gap-2'>
-                                    <img
-                                        className='w-6 sm:w-7'
-                                        src='/icons/globe.svg'
-                                    />
-                                    <div className="text-sm sm:text-base font-bold text-neon-yellow">
-                                        TOP 5 COUNTRIES
+                        })}
+                    </div>
+
+                    {/* Universal Event Registration centralizado */}
+                    <div className="flex justify-center">
+                        {staticDataList.filter(item => item.data === "Universal Event<br />Registration").map(item => (
+                            <div key={item.id} className="flex justify-center">
+                                <div className="flex flex-col gap-2 justify-center items-center
+                                         backdrop-blur-[2px] border border-yellow-400 rounded-full p-4 w-[180px] h-[120px]">
+                                    <div className='flex items-center gap-2'>
+                                        <img
+                                            className='w-7'
+                                            src={`/icons/${item.source}`}
+                                        />
+                                        <div className="text-xl font-bold text-neon-yellow">
+                                            {item.staticValue}
+                                        </div>
                                     </div>
+                                    <div className="text-xs text-center leading-tight" dangerouslySetInnerHTML={{ __html: item.data }}></div>
                                 </div>
-                                <div className="text-xs sm:text-sm text-center">India | Egypt | Pakistan | Brazil | Turkey</div>
-                                <div className="text-xs text-gray-300 text-center">By Number of Registrants</div>
                             </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
 
-                {/* TOP 5 COUNTRIES para Desktop */}
-                <div className="hidden lg:block absolute bottom-80 left-255 text-left">
-                    <div className="flex flex-col gap-2 justify-center
-                     backdrop-blur-[2px] border border-yellow-400 rounded-full p-3 min-w-[160px]">
-                        <div className='flex flex-col text-left gap-0.5'>
-                            <div className='text-2xl font-bold text-neon-yellow'>
-                                TOP 5 <br />COUNTRIES
+                {/* Layout para Mobile/Tablet (até lg) - Tamanhos uniformes */}
+                <div className="lg:hidden flex flex-col items-center mt-8 mb-20 space-y-8">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 place-items-center w-full max-w-4xl">
+                        {/* Universal Event Registration será renderizado abaixo do grid */}
+                        {staticDataList.filter(item => item.data !== "Universal Event<br />Registration").map(item => (
+                            <div key={item.id} className="flex justify-center">
+                                <div className="flex flex-col gap-2 justify-center items-center
+                                         backdrop-blur-[2px] border border-yellow-400 rounded-full p-3 w-[140px] h-[100px] sm:w-[160px] sm:h-[110px]">
+                                    <div className='flex items-center gap-2'>
+                                        <img
+                                            className='w-5 sm:w-6'
+                                            src={`/icons/${item.source}`}
+                                        />
+                                        <div className="text-sm sm:text-lg font-bold text-neon-yellow">
+                                            {item.staticValue}
+                                        </div>
+                                    </div>
+                                    <div className="text-xs text-center leading-tight" dangerouslySetInnerHTML={{ __html: item.data }}></div>
+                                </div>
                             </div>
-                            <div className="text-sm text-neon-yellow">
-                                By Number of Registrants
+                        ))}
+                    </div>
+                    {/* Universal Event Registration centralizado abaixo do grid */}
+                    <div className="flex justify-center w-full">
+                        {staticDataList.filter(item => item.data === "Universal Event<br />Registration").map(item => (
+                            <div key={item.id} className="flex justify-center">
+                                <div className="flex flex-col gap-2 justify-center items-center
+                                         backdrop-blur-[2px] border border-yellow-400 rounded-full p-3 w-[140px] h-[100px] sm:w-[160px] sm:h-[110px]">
+                                    <div className='flex items-center gap-2'>
+                                        <img
+                                            className='w-5 sm:w-6'
+                                            src={`/icons/${item.source}`}
+                                        />
+                                        <div className="text-sm sm:text-lg font-bold text-neon-yellow">
+                                            {item.staticValue}
+                                        </div>
+                                    </div>
+                                    <div className="text-xs text-center leading-tight" dangerouslySetInnerHTML={{ __html: item.data }}></div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="text-md text-white">India | Egypt | Pakistan | Brazil | Turkey
-                        </div>
+                        ))}
                     </div>
                 </div>
+
             </div>
             <style jsx>{`
                 @keyframes sunGlow {
@@ -144,6 +172,13 @@ const SpaceAppsStats = () => {
                 }
                 
                 @media (min-width: 1024px) {
+                    .sun-responsive {
+                        width: 350px !important;
+                        height: 350px !important;
+                    }
+                }
+                
+                @media (min-width: 1280px) {
                     .sun-responsive {
                         width: 400px !important;
                         height: 400px !important;

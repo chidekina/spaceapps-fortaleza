@@ -1,131 +1,78 @@
 [
   {
     "id": 1,
-    "yDirection": "top",
-    "yValue": 0,
-    "xDirection": "left",
-    "xValue": 124,
     "source": "user.svg",
     "staticValue": "93.520",
     "data": "Registered Participants"
   },
   {
     "id": 2,
-    "yDirection": "top",
-    "yValue": 15,
-    "xDirection": "left",
-    "xValue": 70,
     "source": "file-arrow-down.svg",
     "staticValue": "9.996",
     "data": "Projects Submitted"
   },
   {
     "id": 3,
-    "yDirection": "top",
-    "yValue": 15,
-    "xDirection": "right",
-    "xValue": 74,
     "source": "users-three.svg",
     "staticValue": "15.444",
     "data": "Teams"
   },
   {
     "id": 4,
-    "yDirection": "top",
-    "yValue": 40,
-    "xDirection": "left",
-    "xValue": 40,
     "source": "laptop.svg",
     "staticValue": "20",
     "data": "Challenges"
   },
   {
     "id": 5,
-    "yDirection": "top",
-    "yValue": 50,
-    "xDirection": "right",
-    "xValue": 40,
     "source": "globe.svg",
     "staticValue": "163",
-    "data": "Countries/ Territories",
-    "className": "-translate-y-1/2"
+    "data": "Countries/ Territories"
   },
   {
     "id": 6,
-    "yDirection": "top",
-    "yValue": 70,
-    "xDirection": "left",
-    "xValue": 30,
     "source": "planet.svg",
     "staticValue": "15",
     "data": "Space Agency<br />Partners"
   },
   {
     "id": 7,
-    "yDirection": "top",
-    "yValue": 70,
-    "xDirection": "right",
-    "xValue": 30,
     "source": "planet.svg",
     "staticValue": "485",
     "data": "Local Events"
   },
   {
     "id": 8,
-    "yDirection": "bottom",
-    "yValue": 68,
-    "xDirection": "left",
-    "xValue": 30,
     "source": "student.svg",
     "staticValue": "120",
     "data": "Subject Matter<br />Experts"
   },
   {
     "id": 9,
-    "yDirection": "bottom",
-    "yValue": 32,
-    "xDirection": "left",
-    "xValue": 45,
     "source": "thumbs-up.svg",
     "staticValue": "512M",
     "data": "Social Mentions<br />Reach"
   },
   {
     "id": 10,
-    "yDirection": "bottom",
-    "yValue": 5,
-    "xDirection": "left",
-    "xValue": 85,
     "source": "thumbs-up.svg",
     "staticValue": "26",
     "data": "Amplification<br />Collaborators"
   },
   {
     "id": 11,
-    "yDirection": "bottom",
-    "yValue": 0,
-    "xDirection": "left",
-    "xValue": 135,
     "source": "rocket-launch.svg",
     "staticValue": "26",
     "data": "Navigators"
   },
   {
     "id": 12,
-    "yDirection": "bottom",
-    "yValue": 10,
-    "xDirection": "right",
-    "xValue": 70,
     "source": "pencil-line.svg",
     "staticValue": "14",
     "data": "Global Offers"
   },
   {
     "id": 13,
-    "yDirection": "bottom",
-    "yValue": 30,
-    "xDirection": "right",
-    "xValue": 30,
     "source": "world-wide.svg",
     "staticValue": "5.796",
     "data": "Universal Event<br />Registration"

@@ -8,7 +8,7 @@ const Statics = ({ list }) => {
                     <h4 className="font-black text-2xl sm:text-3xl lg:text-4xl text-neon-yellow">
                         <CountUp end={item.number} duration={4} />
                     </h4>
-                    <p className="font-semibold text-sm sm:text-lg lg:text-2xl break-words">
+                    <p className="font-semibold text-sm sm:text-lg lg:text-xl break-words">
                         {item.description}
                     </p>
                 </li>

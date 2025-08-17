@@ -11,6 +11,7 @@ import SpaceAppsStats from "../../components/SpaceAppsStats";
 import SlideUpOnScroll from "../../effects/SlideUpOnScroll";
 import staticsList from "../../db/statics.json";
 import PromoBanner from "../../components/PromoBanner";
+import Overlay from "../../components/Overlay";
 
 const Home = () => {
     return (
@@ -45,7 +46,8 @@ const Home = () => {
                 <ArrowDown />
             </Banner>
             <PromoBanner />
-            <GalaxyBg bgImage="/galaxy.jpg">
+            <GalaxyBg bgImage="/galaxy-2.jpg">
+            <Overlay />
                 <SlideUpOnScroll delay={0.2} duration={0.8} distance={80}>
                     <CircleBg>
                         <HeadText text="SPACE APPS EM NÚMEROS" />

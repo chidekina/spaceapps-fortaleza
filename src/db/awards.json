@@ -37,7 +37,7 @@
     {
         "id": 8,
         "title": "Best Use of Storytelling",
-        "path": "/src/assets/Awards/Best Use of Storytelling.svg"
+        "path": "/src/assets/Awards/Best Storytelling.svg"
     },
     {
         "id": 9,
@@ -47,6 +47,6 @@
     {
         "id": 10,
         "title": "Art & Technology",
-        "path": "/src/assets/Awards/Art & Technology.svg"
+        "path": "/src/assets/Awards/Art and Technology.svg"
     }
 ]

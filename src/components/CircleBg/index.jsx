@@ -5,7 +5,7 @@ const CircleBg = ({
     className = ""
 }) => {
     const circles = Array.from({ length: circleCount }, (_, i) => {
-        const baseSize = 700; // Tamanho base menor para mobile
+        const baseSize = 800; // Tamanho base menor para mobile
         const increment = 150; // Incremento menor entre círculos
         const size = baseSize + (i * increment);
 
