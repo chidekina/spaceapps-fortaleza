@@ -41,7 +41,7 @@ const Home = () => {
                 />
                 <Button
                     text="Inscreva-se"
-                    link="https://www.sympla.com.br/preview/d05c9b4ea5d496d2fe49626a0c93c3be"
+                    link="https://www.sympla.com.br/evento/nasa-space-apps-challenge-2025/3070558#compartilhar-evento?share_id=copiarlink"
                 />
                 <ArrowDown />
             </Banner>

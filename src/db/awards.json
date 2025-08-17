@@ -2,51 +2,51 @@
     {
         "id": 1,
         "title": "Most Inspirational",
-    "path": "/src/assets/Awards/Most Inspirational.svg"
+    "path": "/Awards/Most Inspirational.svg"
     },
     {
         "id": 2,
         "title": "Best Mission Concept",
-    "path": "/src/assets/Awards/Best Mission Concept.svg"
+    "path": "/Awards/Best Mission Concept.svg"
     },
     {
         "id": 3,
         "title": "Galactic Impact",
-    "path": "/src/assets/Awards/Galactic Impact.svg"
+    "path": "/Awards/Galactic Impact.svg"
     },
     {
         "id": 4,
         "title": "Best Use of Data",
-    "path": "/src/assets/Awards/Best Use of Data.svg"
+    "path": "/Awards/Best Use of Data.svg"
     },
     {
         "id": 5,
         "title": "Local Impact",
-    "path": "/src/assets/Awards/Local Impact.svg"
+    "path": "/Awards/Local Impact.svg"
     },
     {
         "id": 6,
         "title": "Global Community",
-    "path": "/src/assets/Awards/Global Community.svg"
+    "path": "/Awards/Global Community.svg"
     },
     {
         "id": 7,
         "title": "Best Use of Technology",
-        "path": "/src/assets/Awards/Best Use of Technology.svg"
+        "path": "/Awards/Best Use of Technology.svg"
     },
     {
         "id": 8,
         "title": "Best Use of Storytelling",
-        "path": "/src/assets/Awards/Best Storytelling.svg"
+        "path": "/Awards/Best Storytelling.svg"
     },
     {
         "id": 9,
         "title": "Best Use of Science",
-        "path": "/src/assets/Awards/Best Use of Science.svg"
+        "path": "/Awards/Best Use of Science.svg"
     },
     {
         "id": 10,
         "title": "Art & Technology",
-        "path": "/src/assets/Awards/Art and Technology.svg"
+        "path": "/Awards/Art and Technology.svg"
     }
 ]
