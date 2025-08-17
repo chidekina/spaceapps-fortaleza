@@ -101,7 +101,7 @@ const SpaceAppsStats = () => {
                                             src={`/icons/${item.source}`}
                                         />
                                         <div className="text-xl font-bold text-neon-yellow">
-                                            {item.staticValue}
+                                            {item.data === "Space Agency<br />Partners" ? item.staticValue : `${item.staticValue}+`}
                                         </div>
                                     </div>
                                     <div className="text-xs text-center leading-tight" dangerouslySetInnerHTML={{ __html: item.data }}></div>
@@ -125,7 +125,7 @@ const SpaceAppsStats = () => {
                                             src={`/icons/${item.source}`}
                                         />
                                         <div className="text-sm sm:text-lg font-bold text-neon-yellow">
-                                            {item.staticValue}
+                                            {item.data === "Space Agency<br />Partners" ? item.staticValue : `${item.staticValue}+`}
                                         </div>
                                     </div>
                                     <div className="text-xs text-center leading-tight" dangerouslySetInnerHTML={{ __html: item.data }}></div>
@@ -145,7 +145,7 @@ const SpaceAppsStats = () => {
                                             src={`/icons/${item.source}`}
                                         />
                                         <div className="text-sm sm:text-lg font-bold text-neon-yellow">
-                                            {item.staticValue}
+                                            {item.data === "Space Agency<br />Partners" ? item.staticValue : `${item.staticValue}+`}
                                         </div>
                                     </div>
                                     <div className="text-xs text-center leading-tight" dangerouslySetInnerHTML={{ __html: item.data }}></div>

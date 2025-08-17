@@ -38,7 +38,7 @@ const AboutUs = () => {
                 <Overlay />
                 <SlideUpOnScroll>
 
-                    <div className="flex flex-col relative z-20 pt-8 md:pt-12 lg:pt-16 mx-auto gap-6 md:gap-8 lg:gap-12" >
+                    <div className="flex flex-col relative z-20 pt-4 md:pt-12 lg:pt-16 mx-auto gap-4 md:gap-8 lg:gap-12" >
                         <h1 className='text-neon-yellow text-center font-bold leading-relaxed px-4 md:px-8 lg:px-12 text-lg md:text-xl lg:text-2xl'>
                             O NASA Space Apps é um hackathon global para programadores, cientistas, designers, contadores de
                             histórias, fabricantes, tecnólogos e inovadores. Os benefícios para os participantes incluem:
@@ -48,7 +48,7 @@ const AboutUs = () => {
                             style={{ backgroundImage: `url(${WavesSvg})` }}
                         >
                             <Overlay />
-                            <div className='z-30 flex flex-col gap-8 md:gap-12 lg:gap-16 px-4 md:px-8 lg:px-12'>
+                            <div className='z-30 flex flex-col gap-4 md:gap-12 lg:gap-16 px-4 md:px-8 lg:px-12'>
                                 <SlideUpOnScroll>
                                     <p className='w-full md:w-3/4 lg:w-1/2 text-lg md:text-xl lg:text-2xl text-center md:text-left'>
                                         <span className='font-bold'>Conhecer pessoas com interesses em comum: <br /></span>
@@ -71,7 +71,7 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </SlideUpOnScroll>
-                <div className='flex flex-col gap-2 relative z-30 mt-16 md:mt-20 lg:mt-30 text-center'>
+                <div className='flex flex-col gap-2 relative z-30 mt-8 md:mt-20 lg:mt-30 text-center'>
                     <SlideUpOnScroll>
                         <h1 className='font-bold text-xl md:text-2xl lg:text-3xl font-heading text-neon-yellow px-4 md:px-8 lg:px-12'>
                             Usar dados abertos para abordar uma variedade de desafios:
@@ -93,7 +93,7 @@ const AboutUs = () => {
                             style={{ backgroundImage: `url(${Voronoi})` }}
                         >
                             <Overlay />
-                            <div className='w-full md:w-3/4 lg:w-1/2 md:ml-auto text-base md:text-lg lg:text-xl font-bold text-center md:text-center lg:text-left font-heading -mr-0 md:-mr-15 lg:-mr-30 z-40 mt-6 md:mt-8 lg:mt-10 px-4 md:px-0'>
+                            <div className='w-full md:w-3/4 lg:w-1/2 md:ml-auto text-base md:text-lg lg:text-xl font-bold text-center md:text-center lg:text-left font-heading -mr-0 md:-mr-15 lg:-mr-30 z-40 mt-4 md:mt-8 lg:mt-10 px-4 md:px-0'>
                                 <h1 className='text-neon-yellow'>
                                     TEMA <span className='font-black text-blue-yonder'>2025</span>
                                 </h1>
@@ -113,7 +113,7 @@ const AboutUs = () => {
             >
                 <SlideUpOnScroll>
 
-                    <p className='mt-20 md:mt-30 lg:mt-40 text-center font-heading font-black text-neon-yellow z-30 text-3xl md:text-4xl lg:text-5xl px-4'>AWARDS 2025</p>
+                    <p className='mt-8 md:mt-30 lg:mt-40 text-center font-heading font-black text-neon-yellow z-30 text-3xl md:text-4xl lg:text-5xl px-4'>AWARDS 2025</p>
                 </SlideUpOnScroll>
                 <SlideUpOnScroll>
                     <div
