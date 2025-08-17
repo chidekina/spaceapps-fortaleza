@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react';
-import Ellipse1 from '../../assets/Orbits/Ellipse 1.svg';
-import Ellipse2 from '../../assets/Orbits/Ellipse 2.svg';
-import Ellipse3 from '../../assets/Orbits/Ellipse 3.svg';
-import Ellipse4 from '../../assets/Orbits/Ellipse 4.svg';
-import Ellipse5 from '../../assets/Orbits/Ellipse 5.svg';
 import WavesSvg from '../../assets/waves.svg';
+import Orbits from '../../components/Orbits';
+import Overlay from '../../components/Overlay';
 
 const AboutUs = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -13,13 +10,6 @@ const AboutUs = () => {
         setIsVisible(true);
     }, []);
 
-    const orbits = [
-        { svg: Ellipse1, size: 'w-[450px] h-[320px]' },
-        { svg: Ellipse2, size: 'w-[400px] h-[280px]' },
-        { svg: Ellipse3, size: 'w-[350px] h-[240px]' },
-        { svg: Ellipse4, size: 'w-[300px] h-[200px]' },
-        { svg: Ellipse5, size: 'w-[250px] h-[160px]' },
-    ];
 
     return (
         <>
@@ -27,27 +17,9 @@ const AboutUs = () => {
                 className="relative min-h-screen w-full overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
                 style={{ backgroundImage: 'url(/galaxy.gif)' }}
             >
-                {/* Overlay escuro por cima da imagem */}
-                <div className="absolute inset-0 bg-black/50 z-0"></div>
+                <Overlay />
+                <Orbits />
 
-                {/* Container das órbitas posicionado no canto superior esquerdo */}
-                <div className="-left-50 absolute top-12 transform scale-175 z-10">
-                    {/* Órbitas e Planetas */}
-                    {orbits.map((orbit, index) => (
-                        <div key={index} className="absolute">
-                            {/* Órbita estática */}
-                            <div className={`${orbit.size} `}>
-                                <img
-                                    src={orbit.svg}
-                                    alt={`Orbit ${index + 1}`}
-                                    className="w-full h-full object-contain filter brightness-90"
-                                />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Conteúdo da página */}
                 <div className={`absolute right-15 top-1/2 transform -translate-y-1/2 max-w-lg text-white transition-all duration-1000 z-20 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                     <h1 className="text-5xl font-bold mb-8" style={{ color: '#EAFE07' }}>Sobre Nós</h1>
                     <p className="text-xl leading-relaxed mb-6">
@@ -67,8 +39,7 @@ const AboutUs = () => {
                 className="relative min-h-screen w-full overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
                 style={{ backgroundImage: 'url(/galaxy.gif)' }}
             >
-                {/* Overlay escuro por cima da imagem */}
-                <div className="absolute inset-0 bg-black/50 z-0"></div>
+                <Overlay />
 
                 {/* Conteúdo da segunda seção */}
                 <div className="flex flex-col relative z-20 pt-16 px-12 mx-auto gap-12" >
@@ -95,11 +66,9 @@ const AboutUs = () => {
                     className="relative flex flex-col z-20 p-12 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: `url(${WavesSvg})` }}
                 >
-                    {/* Overlay para deixar o background mais opaco */}
-                    <div className="absolute inset-0 bg-black/70 z-0"></div>
-
+                    <Overlay opacity={70} />
                     <div className='relative z-10'>
-                        <h1 className='font-bold text-2xl mb-4 font-heading text-white'>
+                        <h1 className='font-bold text-2xl mb-4 font-heading'>
                             Usar dados abertos para abordar uma variedade de desafios:
                         </h1>
                         <p className='text-lg leading-relaxed mb-10'>

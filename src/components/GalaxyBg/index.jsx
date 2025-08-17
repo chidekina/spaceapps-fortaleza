@@ -1,18 +1,16 @@
 const GalaxyBg = ({
     children,
     minHeight = "100vh",
-    isFixed = true
+    isFixed = true,
+    bgImage
 }) => {
     return (
         <section
-            className={`relative w-full min-h-screen overflow-hidden ${isFixed ? 'bg-fixed' : 'bg-scroll'
+            className={`relative w-full min-h-screen overflow-hidden ${isFixed ? 'bg-fixed' : 'bg-scroll bg-cover bg-center'
                 } bg-cover bg-center bg-no-repeat`}
             style={{
                 minHeight,
-                backgroundImage: 'url(/galaxy.jpg)',
-                backgroundAttachment: isFixed ? 'fixed' : 'scroll',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundImage: `url(${bgImage})`,
                 backgroundColor: '#0a0a0a' // Fallback para um preto espacial
             }}
         >

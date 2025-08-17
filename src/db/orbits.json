@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "path": "src/assets/Elipse 1.svg",
+    "size": "w-[450px] h-[320px]"
+  },
+  {
+    "id": 2,
+    "path": "src/assets/Elipse 2.svg",
+    "size": "w-[400px] h-[280px]"
+  },
+  {
+    "id": 3,
+    "path": "src/assets/Elipse 3.svg",
+    "size": "w-[350px] h-[240px]"
+  },
+  {
+    "id": 4,
+    "path": "src/assets/Elipse 4.svg",
+    "size": "w-[300px] h-[200px]"
+  },
+  {
+    "id": 5,
+    "path": "src/assets/Elipse 1.svg",
+    "size": "w-[250px] h-[160px]"
+  }
+]

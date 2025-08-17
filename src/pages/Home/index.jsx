@@ -42,7 +42,7 @@ const Home = () => {
                 <ArrowDown />
             </Banner>
             <PromoBanner />
-            <GalaxyBg>
+            <GalaxyBg bgImage="/galaxy.jpg">
                 <SlideUpOnScroll delay={0.2} duration={0.8} distance={80}>
                     <CircleBg>
                         <HeadText text="SPACE APPS EM NÚMEROS" />
