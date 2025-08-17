@@ -5,10 +5,10 @@ const BlurAppearAny = ({
     className = "",
     speed = "normal",
     delay = 0,
-    as = "span" 
+    as = "span"
 }) => {
     const speedSettings = {
-        slow: 0.25,
+        slow: 0.50,
         normal: 0.07,
         fast: 0.03
     };

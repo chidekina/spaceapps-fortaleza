@@ -3,7 +3,8 @@ import BlurAppear from "../../effects/BlurAppear";
 const BannerImage = () => {
     return (
         <BlurAppear
-            speed="slow"
+            speed="custom"
+            delay={0.2}
             as="div"
         >
             <div className="flex flex-col items-center my-4 sm:my-6 lg:my-8">
@@ -11,6 +12,7 @@ const BannerImage = () => {
                     src="/logo/6.png"
                     alt="Logo Space Apps"
                     className="w-48 sm:w-60 md:w-70 lg:w-80 h-fit max-w-full"
+                    loading="lazy"
                 />
                 <div className="flex items-center">
                 </div>

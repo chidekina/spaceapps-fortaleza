@@ -17,6 +17,7 @@ const ArrowDown = () => {
                 src="/icons/caret-down.svg"
                 alt="Seta apontando para baixo"
                 className="mt-25 w-20 cursor-pointer"
+                loading="lazy"
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
                 onClick={scrollToStats}

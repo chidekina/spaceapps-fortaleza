@@ -12,6 +12,7 @@ const Awards = () => {
                         src={award.path}
                         alt={award.title}
                         className='w-24 md:w-32 lg:w-40 self-center'
+                        loading="lazy"
                     />
                 </li>
             ))}

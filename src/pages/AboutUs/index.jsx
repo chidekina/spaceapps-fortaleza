@@ -7,7 +7,9 @@ import Awards from '../../components/Awards';
 import SlideFromRight from '../../effects/SlideFromRight';
 import SlideUpOnScroll from '../../effects/SlideUpOnScroll';
 
-const AboutUs = () => {
+import React from "react";
+
+const AboutUs = React.memo(() => {
     return (
         <>
             <section
@@ -101,6 +103,7 @@ const AboutUs = () => {
                                     src='/Theme.png'
                                     alt='Tema 2025 "Learn Launch Lead"'
                                     className='z-20 w-48 md:w-64 lg:w-80 mx-auto lg:mx-0'
+                                    loading="lazy"
                                 />
                             </div>
                         </div>
@@ -127,6 +130,6 @@ const AboutUs = () => {
             </section>
         </>
     );
-}
+});
 
 export default AboutUs;

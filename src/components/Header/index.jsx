@@ -20,9 +20,10 @@ const Header = () => {
                                 src="./logo/4.png"
                                 alt="Logo Space Apps Fortaleza"
                                 className="h-15 w-auto mr-3 cursor-pointer transform transition-all duration-300 ease-in-out 
-                                         hover:scale-110 hover:brightness-110 hover:rotate-1 hover:shadow-lg
-                                         active:scale-95 active:brightness-125
-                                         filter hover:drop-shadow-lg"
+                                             hover:scale-110 hover:brightness-110 hover:rotate-1 hover:shadow-lg
+                                             active:scale-95 active:brightness-125
+                                             filter hover:drop-shadow-lg"
+                                loading="lazy"
                                 style={{
                                     filter: 'brightness(1)',
                                     transition: 'all 0.3s ease-in-out'

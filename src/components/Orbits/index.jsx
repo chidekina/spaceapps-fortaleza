@@ -22,6 +22,7 @@ const Orbits = () => {
                             src={orbit.svg}
                             alt={`Orbit ${orbit.id}`}
                             className="w-full h-full object-contain filter brightness-90"
+                            loading="lazy"
                         />
                     </div>
                 </div>
