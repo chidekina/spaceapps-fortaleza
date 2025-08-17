@@ -20,20 +20,23 @@ const Home = () => {
                     typewriter={true}
                     speed="fast"
                     text="Welcome aboard to the biggest hackathon in the world."
-                    className="italic"
+                    className="italic px-4 sm:px-8 lg:px-16"
+                    fontSize="text-lg sm:text-xl md:text-2xl lg:text-3xl"
                 />
                 <BannerImage />
                 <BannerText
                     text="3, 4 e 5"
-                    fontSize="text-5xl"
+                    fontSize="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                     fontWeight="font-black"
                     textColor="text-neon-yellow"
+                    className="px-4"
                 />
                 <BannerText
                     text="DE OUTUBRO DE 2025"
-                    fontSize="text-2xl"
+                    fontSize="text-lg sm:text-xl md:text-2xl lg:text-3xl"
                     fontWeight="font-bold"
                     margin="mb-8"
+                    className="px-4"
                 />
                 <Button
                     text="Inscreva-se"
@@ -49,7 +52,7 @@ const Home = () => {
                         <Statics list={staticsList} />
                     </CircleBg>
                 </SlideUpOnScroll>
-            <SpaceAppsStats />
+                <SpaceAppsStats />
             </GalaxyBg>
         </>
     );

@@ -17,14 +17,14 @@ const StaticData = ({
     if (isSpecial) {
         return (
             <div className={`absolute text-center ${className}`} style={positionStyle}>
-                <div className="flex flex-col gap-2 justify-center items-center
-                         backdrop-blur-[2px] border border-yellow-400 rounded-lg p-3 min-w-[200px]">
-                    <div className='flex items-center gap-2'>
+                <div className="flex flex-col gap-1 sm:gap-2 justify-center items-center
+                         backdrop-blur-[2px] border border-yellow-400 rounded-lg p-2 sm:p-3 min-w-[140px] sm:min-w-[200px]">
+                    <div className='flex items-center gap-1 sm:gap-2'>
                         <img
-                            className='w-8'
+                            className='w-6 sm:w-8'
                             src={`/icons/${source}`}
                         />
-                        <div className="text-lg font-bold text-neon-yellow">
+                        <div className="text-sm sm:text-lg font-bold text-neon-yellow">
                             {staticValue}
                         </div>
                     </div>
@@ -37,14 +37,14 @@ const StaticData = ({
 
     return (
         <div className={`absolute text-center ${className}`} style={positionStyle}>
-            <div className="flex flex-col gap-2 justify-center items-center
-                     backdrop-blur-[2px] border border-yellow-400 rounded-full p-3 min-w-[160px]">
-                <div className='flex items-center gap-2'>
+            <div className="flex flex-col gap-1 sm:gap-2 justify-center items-center
+                     backdrop-blur-[2px] border border-yellow-400 rounded-full p-2 sm:p-3 min-w-[120px] sm:min-w-[160px]">
+                <div className='flex items-center gap-1 sm:gap-2'>
                     <img
-                        className='w-8'
+                        className='w-6 sm:w-8'
                         src={`/icons/${source}`}
                     />
-                    <div className="text-2xl font-bold text-neon-yellow">
+                    <div className="text-lg sm:text-2xl font-bold text-neon-yellow">
                         {staticValue}
                     </div>
                 </div>

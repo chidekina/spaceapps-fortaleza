@@ -5,7 +5,7 @@ const Banner = ({ children }) => {
 
     return (
         <div
-            className="relative w-full h-auto flex-col flex justify-center items-center text-center overflow-hidden pb-20 py-40"
+            className="relative w-full min-h-screen flex-col flex justify-center items-center text-center overflow-hidden pb-10 sm:pb-20 py-20 sm:py-40 px-4 sm:px-8"
             aria-label="Banner do Space Apps Fortaleza"
         >
             <video
