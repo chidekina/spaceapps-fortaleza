@@ -3,6 +3,7 @@
 /* Fonte padrão para o body */
 body {
   font: var(--font-body-regular);
+  color: white;
 }
 
 /* Classes personalizadas para gradientes */

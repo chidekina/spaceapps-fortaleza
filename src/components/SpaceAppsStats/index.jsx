@@ -149,7 +149,7 @@ const SpaceAppsStats = () => {
                 </div>
 
                 {/* Subject Matter Experts - Bottom Right */}
-                <div className="absolute bottom-65 left-35 text-center">
+                <div className="absolute bottom-80 left-30 text-center">
                     <div className="flex flex-col gap-2 justify-center items-center
                      backdrop-blur-[2px] border border-yellow-400 rounded-full p-3 min-w-[160px]">
                         <div className='flex items-center gap-2'>
@@ -245,7 +245,7 @@ const SpaceAppsStats = () => {
                             Registration</div>
                     </div>
                 </div>
-                <div className="absolute bottom-60 left-225 text-left">
+                <div className="absolute bottom-80 left-255 text-left">
                     <div className="flex flex-col gap-2 justify-center
                      backdrop-blur-[2px] border border-yellow-400 rounded-full p-3 min-w-[160px]">
                         <div className='flex flex-col text-left gap-0.5'>

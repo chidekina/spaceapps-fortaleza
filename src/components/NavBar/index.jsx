@@ -1,4 +1,4 @@
-import menuLinks from "./menu.json";
+import menuLinks from "../../db/menu.json";
 
 import { NavLink } from "react-router";
 
