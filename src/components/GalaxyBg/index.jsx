@@ -2,7 +2,8 @@ const GalaxyBg = ({
     children,
     minHeight = "100vh",
     isFixed = true,
-    bgImage
+    bgImage,
+    ...props
 }) => {
     return (
         <section
@@ -13,6 +14,7 @@ const GalaxyBg = ({
                 backgroundImage: `url(${bgImage})`,
                 backgroundColor: '#0a0a0a' // Fallback para um preto espacial
             }}
+            {...props}
         >
             {/* Overlay sutil para melhor contraste do texto */}
 

@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Link } from "react-router";
 import NavBar from "../NavBar";
 
 const Header = () => {
@@ -14,7 +15,32 @@ const Header = () => {
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex-shrink-0 flex items-center">
-                        <img src="./logo/4.png" alt="Logo Space Apps Fortaleza" className="h-15 w-auto mr-3" />
+                        <Link to="/" className="flex items-center group">
+                            <img
+                                src="./logo/4.png"
+                                alt="Logo Space Apps Fortaleza"
+                                className="h-15 w-auto mr-3 cursor-pointer transform transition-all duration-300 ease-in-out 
+                                         hover:scale-110 hover:brightness-110 hover:rotate-1 hover:shadow-lg
+                                         active:scale-95 active:brightness-125
+                                         filter hover:drop-shadow-lg"
+                                style={{
+                                    filter: 'brightness(1)',
+                                    transition: 'all 0.3s ease-in-out'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.target.style.filter = 'brightness(1.2) drop-shadow(0 0 15px rgba(255, 255, 0, 0.6))';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.target.style.filter = 'brightness(1)';
+                                }}
+                                onMouseDown={(e) => {
+                                    e.target.style.filter = 'brightness(1.3) drop-shadow(0 0 20px rgba(255, 255, 0, 0.8))';
+                                }}
+                                onMouseUp={(e) => {
+                                    e.target.style.filter = 'brightness(1.2) drop-shadow(0 0 15px rgba(255, 255, 0, 0.6))';
+                                }}
+                            />
+                        </Link>
                     </div>
 
                     {/* NavBar para desktop */}

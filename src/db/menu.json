@@ -8,10 +8,6 @@
         "id": 2,
         "name": "Sobre",
         "path": "/about-us"
-    },
-    {
-        "id": 3,
-        "name": "Contatos",
-        "path": "/contacts"
     }
+
 ]
