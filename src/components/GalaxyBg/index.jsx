@@ -12,7 +12,7 @@ const GalaxyBg = ({
 
     return (
         <section
-            className={`relative w-full min-h-screen ${isFixed ? 'bg-fixed' : 'bg-scroll bg-cover bg-center overflow-hidden'} bg-cover bg-center bg-no-repeat ${className}`}
+            className={`relative w-full min-h-[80vh] md:min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden ${className}`}
             style={{
                 minHeight,
                 backgroundImage: `url(${bgImage})`,
@@ -41,7 +41,7 @@ const GalaxyBg = ({
             )}
 
             {/* Conteúdo */}
-            <div className={`relative z-20 min-h-full flex flex-col justify-center items-center py-8 md:px-8 md:py-16 lg:px-20 lg:py-32 overflow-hidden transition-opacity duration-700 ${isBgLoaded ? "opacity-100" : "opacity-0"}`}>
+            <div className={`relative z-20 min-h-full flex flex-col justify-center items-center overflow-hidden transition-opacity duration-700 ${isBgLoaded ? "opacity-100" : "opacity-0"}`}>
                 {isBgLoaded && children}
             </div>
         </section>

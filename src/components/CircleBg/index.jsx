@@ -24,7 +24,7 @@ const CircleBg = ({
     });
 
     return (
-        <div className={`relative ${className} mb-32 sm:mb-40 lg:mb-48 px-4 sm:px-8`}>
+        <div className={`relative ${className} mb-32 sm:mb-40 lg:mb-80 px-4 sm:px-8 lg:mt-50`}>
             {circles.map(circle => (
                 <div
                     key={circle.id}

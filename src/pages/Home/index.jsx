@@ -1,6 +1,7 @@
 import ArrowDown from "../../components/ArrowDown";
 import Banner from "../../components/Banner";
 import BannerImage from "../../components/BannerImage";
+import React, { useEffect } from "react";
 import BannerText from "../../components/BannerText";
 import Button from "../../components/Button";
 import CircleBg from "../../components/CircleBg";
@@ -14,6 +15,9 @@ import PromoBanner from "../../components/PromoBanner";
 import Overlay from "../../components/Overlay";
 
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <Banner>
@@ -50,7 +54,7 @@ const Home = () => {
                 <Overlay />
                 <SlideUpOnScroll delay={0.2} duration={0.8} distance={80}>
                     <CircleBg>
-                        <HeadText text="SPACE APPS EM NÚMEROS" />
+                        <HeadText text="SPACE APPS EM NÚMEROS" className="mt-8" />
                         <Statics list={staticsList} />
                     </CircleBg>
                 </SlideUpOnScroll>
