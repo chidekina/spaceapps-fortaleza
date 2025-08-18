@@ -5,13 +5,14 @@ const GalaxyBg = ({
     minHeight = "100vh",
     isFixed = true,
     bgImage,
+    className,
     ...props
 }) => {
     const [isBgLoaded, setIsBgLoaded] = useState(false);
 
     return (
         <section
-            className={`relative w-full min-h-screen ${isFixed ? 'bg-fixed' : 'bg-scroll bg-cover bg-center overflow-hidden'} bg-cover bg-center bg-no-repeat`}
+            className={`relative w-full min-h-screen ${isFixed ? 'bg-fixed' : 'bg-scroll bg-cover bg-center overflow-hidden'} bg-cover bg-center bg-no-repeat ${className}`}
             style={{
                 minHeight,
                 backgroundImage: `url(${bgImage})`,
