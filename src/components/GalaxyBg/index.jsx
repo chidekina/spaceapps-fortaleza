@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 
 const GalaxyBg = ({
     children,
@@ -9,14 +10,35 @@ const GalaxyBg = ({
     ...props
 }) => {
     const [isBgLoaded, setIsBgLoaded] = useState(false);
+    const [isIOS, setIsIOS] = useState(false);
+
+    useEffect(() => {
+        const checkIOS = () => {
+            return /iPad|Iphone|Ipod/.test(navigator.userAgent) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        };
+        setIsIOS(checkIOS());
+    }, []); 
 
     return (
         <section
             className={`relative w-full min-h-screen ${isFixed ? 'bg-fixed' : 'bg-scroll bg-cover bg-center overflow-hidden'} bg-cover bg-center bg-no-repeat ${className}`}
             style={{
                 minHeight,
-                backgroundImage: `url(${bgImage})`,
-                backgroundColor: '#0a0a0a'
+                backgroundColor: '#0a0a0a',
+                ...(isIOS ? {
+                    backgroundImage: `url(${bgImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundAttachment: 'scroll',
+                    WebkitBackgroundSize: 'cover',
+                    WebkitTransform: 'translateZ(0)',
+                } : {
+                    backgroundImage: `url(${bgImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundAttachment: isFixed ? 'fixed' : 'scroll'
+                })
             }}
             {...props}
         >
@@ -48,4 +70,4 @@ const GalaxyBg = ({
     );
 }
 
-export default GalaxyBg
+export default GalaxyBg;
